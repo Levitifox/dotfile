@@ -48,9 +48,9 @@ Ideal for users who want a pre-configured, minimal, and efficient system setup w
 3. Clone this repository and set up Hyprland:
     ```bash
     cd /opt/
-    sudo git clone https://github.com/Levitifox/dotfile.git
-    sudo chown -R <username>:<username> dotfile/
-    cd dotfile/
+    sudo git clone https://github.com/Levitifox/hyprstack.git
+    sudo chown -R <username>:<username> hyprstack/
+    cd hyprstack/
     chmod +x set-hypr
     ./set-hypr
     ```
