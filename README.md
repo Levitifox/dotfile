@@ -55,6 +55,39 @@ Ideal for users who want a pre-configured, minimal, and efficient system setup w
     ./set-hypr
     ```
 
+## Useful Commands and Configurations
+
+### Set Up Auto-login
+
+1. Create the necessary directory:
+   ```bash
+   sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
+   ```
+
+2. Edit the override configuration file:
+   ```bash
+   sudo nano /etc/systemd/system/getty@tty1.service.d/override.conf
+   ```
+
+3. Add the following content to the file:
+   ```ini
+   [Service]
+   ExecStart=
+   ExecStart=-/sbin/agetty --autologin <username> --noclear %I $TERM
+   ```
+
+### Remove Password Prompt for `sudo` Commands
+
+1. Open the sudoers file for editing:
+   ```bash
+   sudo visudo
+   ```
+
+2. Add the following line at the end of the file:
+   ```plaintext
+   <username> ALL=(ALL) NOPASSWD: ALL
+   ```
+
 ---
 
 ## Applications

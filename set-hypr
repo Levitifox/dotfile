@@ -110,6 +110,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R applications ~/.local/share/
     cp -R .vscode ~/
     cp -R Kvantum ~/.config/
+
+    cp environment ~/etc/
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
@@ -131,6 +133,7 @@ read -n1 -rep 'Would you like to copy .bashrc and .aliases? (y,n) ' COPY_CONF
 if [[ $COPY_CONF == "Y" || $COPY_CONF == "y" ]]; then
     echo -e "Copying .bashrc to home directory...\n"
     cp .bashrc ~/
+    cp .bash_profile ~/
     echo -e "Copying .aliases to home directory...\n"
     cp .aliases ~/
     echo -e "Files have been successfully copied!"
