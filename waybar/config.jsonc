@@ -14,8 +14,26 @@
       "memory",
       "pulseaudio",
       "tray",
+      "hyprland/language",
+      "battery",
       "custom/power",
     ],
+    "hyprland/language": {
+      "format": "{}",
+      "format-ru": " RU",
+      "format-en": " EN",
+    },
+    "battery": {
+	    "bat": "BAT0",
+	    "interval": 60,
+	    "states": {
+		      "warning": 30,
+		      "critical": 15
+	    },
+	    "format": "{capacity}% {icon}",
+	    "format-icons": ["", "", "", "", ""],
+	    "max-length": 25
+    },
     "hyprland/workspaces": {
       "on-click": "activate",
       "format": "{id}",

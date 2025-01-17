@@ -51,6 +51,8 @@
   #tray,
   #memory,
   #window,
+  #language,
+  #battery,
   #mpris {
     padding: 0.3rem 0.6rem;
     margin: 0.4rem 0.25rem;
@@ -58,14 +60,6 @@
     transition-property: background-color;
     transition-duration: 0.5s;
     background-color: rgba(17, 17, 27, 0.5); /* Adjusted for 50% opacity */
-  }
-  
-  #mpris.playing {
-    color: #a6e3a1;
-  }
-  
-  #mpris.paused {
-    color: #9399b2;
   }
   
   #custom-sep {
@@ -117,4 +111,11 @@
     background-color: #181825;
     border: 2px solid #89b4fa;
   }
-  
+
+  #language {
+    color: #f3df95;
+  }
+
+  #battery {
+    color: #cdd6f4;
+  }

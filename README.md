@@ -95,6 +95,45 @@ Ideal for users who want a pre-configured, minimal, and efficient system setup w
 | `btop`, `htop`           | Resource monitors.                              |
 | `neofetch`               | System information tool.                        |
 | `clipman`                | Clipboard manager.                              |
+| `zathura`               | Lightweight document viewer.                    |
+| `gnome-calculator`      | Calculator application.                         |
+| `gnome-calendar`        | Calendar application.                           |
+| `blueman`               | Bluetooth manager.                              |
+| `telegram-desktop`      | Telegram messaging client.                      |
+| `discord`               | Voice, video, and text communication platform.  |
+| `skypeforlinux-stable-bin` | Skype messaging and video calling client.     |
+| `youtube-music-bin`     | YouTube Music desktop app.                      |
+| `obsidian`              | Note-taking and knowledge management app.       |
+| `obs-studio`            | Open-source screen recorder and streaming tool. |
+| `gimp`                  | GNU Image Manipulation Program.                 |
+
+---
+
+## Aliases
+
+| **Alias**              | **Description**                                     |
+|------------------------|-----------------------------------------------------|
+| `update-system`        | Update system using `pacman` and `yay`               |
+| `update`               | Update system with `pacman -Syu`                    |
+| `fullupdate`           | Full system update with `pacman -Syyu`              |
+| `ls`                   | List directory contents using `exa`                 |
+| `ll`                   | List directory contents in long format using `exa`  |
+| `la`                   | List all files, including hidden, using `exa`       |
+| `ram`                  | Display memory usage with `free -h`                 |
+| `cpu`                  | Display CPU information with `lscpu`                |
+| `disk`                 | Display disk usage with `df -h`                     |
+| `search`               | Search for packages with `pacman -Ss`               |
+| `install`              | Install packages with `sudo pacman -S`              |
+| `remove`               | Remove packages with `sudo pacman -Rns`             |
+| `info`                 | Display package information with `pacman -Si`       |
+| `orphan`               | Find orphaned packages with `pacman -Qtdq`          |
+| `cleanup`              | Remove orphaned packages with `pacman -Rns $(pacman -Qtdq)` |
+| `list`                 | List manually installed packages with `pacman -Qe`  |
+| `yay-update`           | Update AUR and repositories with `yay -Syu --devel --timeupdate` |
+| `yay-clean`            | Remove orphaned packages from AUR with `yay -Rns $(yay -Qtdq)` |
+| `yay-search`           | Search for AUR packages with `yay -Ss`              |
+| `yay-install`          | Install AUR packages with `yay -S`                  |
+| `yay-remove`           | Remove AUR packages with `yay -Rns`                 |
 
 ---
 
@@ -109,7 +148,8 @@ Ideal for users who want a pre-configured, minimal, and efficient system setup w
 - `SUPER + B`: Launch browser (Google Chrome)  
 - `SUPER + R`: Launch app launcher (wofi)  
 - `SUPER + P`: Partial screenshot  
-- `SUPER + L`: Lock screen  
+- `SUPER + L`: Lock screen
+- `SUPER + V`: Open clipboard manager (clipman)
 
 ### Focus Management
 - `SUPER + Left/Right/Up/Down`: Move focus  

@@ -1,0 +1,10 @@
+# Set background and foreground colors
+set default-bg "#000000"
+set default-fg "#FFFFFF"
+
+# Set statusbar colors
+set statusbar-bg "#202020"
+set statusbar-fg "#B0B0B0"
+
+# Set highlight color
+set highlight-color "#F4BF75"

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Joe's Own Editor
+Exec=kitty -e joe
+Terminal=false
+Type=Application
+Icon=utilities-terminal
+Categories=Utility;TextEditor;

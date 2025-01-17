@@ -55,7 +55,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
         thunar xorg-setxkbmap swaync jq swaymsg hyprctl hyprlock git base-devel \
         p7zip unzip unrar tar thunar-archive-plugin file-roller gedit \
         xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-qt grim \
-        btop htop neofetch clipman
+        btop htop neofetch
 
     # Install packages with yay
     yay -S --noconfirm google-chrome swaync clipman joe visual-studio-code-bin
@@ -74,6 +74,25 @@ else
     echo -e "\nInstallation canceled."
 fi
 
+# Prompt user for confirmation
+read -n1 -rep 'Would you like to install all the packages? (zathura, gnome-calculator, Calendar, blueman-manager, telegram, discord, skype, youtube-music, obsidian, obs, gimp) (y,n): ' INST
+if [[ $INST == "Y" || $INST == "y" ]]; then
+    echo -e "\nInstalling packages..."
+
+    # Install packages with pacman
+    sudo pacman -S --noconfirm --needed \
+        zathura gimp
+
+    # Install packages with yay
+    yay -S --noconfirm \
+        gnome-calculator gnome-calendar blueman telegram-desktop \
+        discord skypeforlinux-stable-bin youtube-music-bin obsidian obs-studio
+
+    echo -e "\nInstallation complete!"
+else
+    echo -e "\nInstallation canceled."
+fi
+
 ### Copy Config Files ###
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
@@ -86,7 +105,11 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R waybar ~/.config/
     cp -R swaync ~/.config/
     cp -R wofi ~/.config/
+    cp -R zathura ~/.config/
     cp -R xfce4 ~/.config/
+    cp -R applications ~/.local/share/
+    cp -R .vscode ~/
+    cp -R Kvantum ~/.config/
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
@@ -101,6 +124,16 @@ if [[ $STAR == "Y" || $STAR == "y" ]]; then
     echo -e '\neval "$(starship init bash)"' >> ~/.bashrc
     echo -e "copying starship config file to ~/.confg ...\n"
     cp starship.toml ~/.config/
+fi
+
+### Copy .bashrc and .aliases ###
+read -n1 -rep 'Would you like to copy .bashrc and .aliases? (y,n) ' COPY_CONF
+if [[ $COPY_CONF == "Y" || $COPY_CONF == "y" ]]; then
+    echo -e "Copying .bashrc to home directory...\n"
+    cp .bashrc ~/
+    echo -e "Copying .aliases to home directory...\n"
+    cp .aliases ~/
+    echo -e "Files have been successfully copied!"
 fi
 
 ### Script is done ###

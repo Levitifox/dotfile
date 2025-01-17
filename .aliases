@@ -1,0 +1,31 @@
+update_system() {
+    sudo pacman -Syu --noconfirm
+    sudo pacman -Sc --noconfirm
+    yay -Syu --noconfirm
+}
+alias update='update_system'
+
+alias ls='exa --color=auto'
+alias ll='exa -lh --color=auto'
+alias la='exa -lha --color=auto'
+
+alias ram='free -h'
+alias cpu='lscpu'
+alias disk='df -h'
+
+alias update='sudo pacman -Syu'
+alias fullupdate='sudo pacman -Syyu'
+
+alias search='pacman -Ss'  # Package search
+alias install='sudo pacman -S'  # Install package
+alias remove='sudo pacman -Rns'  # Remove package along with dependencies
+alias info='pacman -Si'  # Package information
+alias orphan='pacman -Qtdq'  # Find orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'  # Remove orphaned packages
+alias list='pacman -Qe'  # List manually installed packages
+
+alias yay-update='yay -Syu --devel --timeupdate'  # Update AUR and repositories
+alias yay-clean='yay -Rns $(yay -Qtdq)'  # Remove orphaned packages from AUR
+alias yay-search='yay -Ss'  # Search in AUR
+alias yay-install='yay -S'  # Install packages from AUR
+alias yay-remove='yay -Rns'  # Remove packages from AUR

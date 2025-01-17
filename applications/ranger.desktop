@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Ranger
+Comment=File Manager
+Exec=kitty --detach ranger
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=Utility;System;

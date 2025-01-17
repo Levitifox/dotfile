@@ -1,8 +1,9 @@
 window {
     margin: 0px;
     border-radius: 8px;
-    border: 1px solid #88c0d0;
-    background-color: rgba(46, 52, 64, 0.4); /* Adjusted for 80% opacity */
+    border: 1px solid #cdd6f4;
+    /* background-color: rgba(46, 52, 64, 0.4); /* Adjusted for 80% opacity */
+    background-color: rgba(30, 30, 46, 0.4);
     transition-property: background-color;
     transition-duration: 0.5s;
 }
